@@ -42,6 +42,7 @@ const Dashboard: React.FC = () => {
                         <YAxis />
                         <Tooltip />
                         <Line type="monotone" dataKey="value" stroke="#8884d8" />
+                        <Line type="monotone" dataKey="User.firstName" stroke="#8884d8" />
                     </LineChart>
                 );
             case 'bar':
@@ -51,6 +52,7 @@ const Dashboard: React.FC = () => {
                         <YAxis />
                         <CartesianGrid stroke="#eee" strokeDasharray="3 3" />
                         <Bar dataKey="value" fill="#8884d8" />
+                        <Bar dataKey="User.firstName" fill="#8884d8" />
                         <Tooltip />
                     </BarChart>
                 );
@@ -60,7 +62,7 @@ const Dashboard: React.FC = () => {
                         <Pie
                             data={progress}
                             dataKey="value"
-                            nameKey="date"
+                            nameKey="User.firstName"
                             cx="50%"
                             cy="50%"
                             outerRadius={150}
