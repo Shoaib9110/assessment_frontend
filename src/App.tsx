@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Dashboard from './components/Dashboard';
+import DataEntry from './components/DataEntry';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    return (
+        <div className='bg-gray-100 min-h-screen p-4'>
+            <div className='pb-6'>
+                <h1>Process Tracker</h1>
+            </div>
+            <div className='flex'>
+                <div className='w-1/2 flex justify-center'>
+                    <DataEntry />
+                </div>
+                <div className='w-1/2 flex justify-center'>
+                    <Dashboard />
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default App;
